@@ -3,7 +3,7 @@
 	font-family: 'Roboto'; sans-serif;
 	/*font-family: 'Lobster', cursive;*/
 	box-sizing: border-box;
-	color: rgb(77,77,77);
+	color: rgb(1,16,27);
 	background-color: rgb(255,255,255);
 	margin-left: 0px;
 }
@@ -24,17 +24,17 @@ body {
 }
 
 #logo{
-	width: 15%;
-	height: 15%;
+	width: 20%;
+	height: 20%;
 }
 
 .myButton {
-	width: 140px;
-	background-color: #BF0018;
-	border: solid 2px rgb(77,77,77);
+	width: 100%;
+	background-color: white;
+	border: solid 2px rgb(1,16,27);
 	border-radius: 5px;
 	cursor: pointer;
-	color: white;
+	color: #BF0018;
 	padding: 5px;
 	margin: 5px;
 	font-size: 16px;
@@ -42,6 +42,7 @@ body {
 #buttons {
 	display: flex;
 	flex-direction: column;
+	width: 140px;
 	margin-top: auto;
 	margin-bottom: auto;
 	margin-right: 3%;
@@ -49,7 +50,8 @@ body {
 }
 
 .myButton:hover {
-	background-color:rgb(77,77,77);
+	background-color: rgb(1,16,27);
+	color: white;
 }
 .right {
     margin-right: 0px;
@@ -69,7 +71,7 @@ h3, h4 {
 }
 hr {
 	width: 100%;
-	border: 1px solid #BF0018;
+	border: 0.25px solid #BF0018;
 }
 
 #testimonials {
@@ -78,19 +80,18 @@ hr {
 	width: 100%;
 	justify-content: space-between;
 	overflow: scroll;
+	padding: 5px;
 }
 #share {
 	display: flex;
 	flex-direction: row;
-	width: 100%;
-	padding-left: 20%;
-	padding-right: 20%;
-	justify-content: space-between;
 	overflow: scroll;
+	margin-left: auto;
+	margin-right: auto;
 }
 .user {
-	width: 15%;
-	height: 15%;
+	width: 125px;
+	height: 125px;
 	margin-top: auto;
 	margin-bottom: auto;
 	padding: 8px;
@@ -103,10 +104,116 @@ p {
 }
 
 .socialmedia {
-	width: 10%;
-	height: 10%;
+	width: 75px;
+	height: 75px;
 	margin-top: auto;
 	margin-bottom: auto;
-	padding: 8px;
-	padding-top: 5px;
+	margin: 10px;
+}
+
+@media screen and (max-width: 800px) and (min-width: 576px) {
+	#logo{
+		width: 20%;
+		height: 20%;
+		margin-top: auto;
+		margin-bottom: auto;
+	}
+}
+
+@media screen and (max-width: 575px) {
+	#logo{
+		width: 80px;
+		height: 80px;
+		margin-top: auto;
+		margin-bottom: auto;
+	}
+
+
+	.myButton:hover {
+		background-color: rgb(1,16,27);
+		color: white;
+	}
+
+	#buttons {
+		display: flex;
+		flex-direction: column;
+		width: 80px;
+		margin-top: auto;
+		margin-bottom: auto;
+		margin-right: 3%;
+		font-size: 14px;
+	}
+	.myButton {
+		width: 100%;
+		background-color: white;
+		border: solid 2px rgb(1,16,27);
+		border-radius: 5px;
+		cursor: pointer;
+		color: #BF0018;
+		padding: 3px;
+		margin: 2px;
+		font-size: 14px;
+	}
+	#value-prop {
+		height: 40%;
+		width: 100%;
+	}
+	h4 {
+		line-height: 5px;
+	}
+	#testimonials {
+		display: flex;
+		flex-direction: column;
+		padding: 0px;
+	}
+	#testimonial {
+		padding: 0px;
+		margin-top: 2px;
+	}
+	.user {
+		width: 100px;
+		height: 100px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 5px;
+		margin-bottom: 2px;
+	}
+	#share {
+		display: flex;
+		flex-direction: row;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.socialmedia {
+		width: 55px;
+		height: 55px;
+		margin-top: -50px
+		padding-top: 5px;
+	}
+}
+
+@media screen and (max-width: 715px)  {
+	#testimonials {
+		display: flex;
+		flex-direction: column;
+		padding: 0px;
+	}
+	#testimonial {
+		padding: 0px;
+		margin-top: 2px;
+	}
+	.user {
+		width: 100px;
+		height: 100px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 5px;
+		margin-bottom: 2px;
+	}
+	.socialmedia {
+		width: 55px;
+		height: 55px;
+		margin-top: -50px
+		padding-top: 5px;
+	}
 }
