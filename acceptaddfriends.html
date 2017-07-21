@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Epicurious Living: My Dashboard</title>
+    <link href="css/stylesflex.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="js/cards.js" defer></script> 
+  </head>
+  <body id ="body_friendsid">
+    <div id="nav-wrapper">
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top" style="background-color: white">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+            <a class="navbar-brand" href="#"><img src="images/LogoBlank.png" alt="Epicurious Living Logo"></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown"><a href="dashboard.html">Feed</a></li>
+            <li class="dropdown">
+              <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Friends <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li class ="dropdown active"><a href="viewfriends.html">View Friends</a></li>
+                <li><a href="acceptaddfriends.html">Accept Friend Requests/Add Friends</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Restaurants <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="myfavoriterestaurants.html">My Favorite Restaurants</a></li>
+                <li><a href="friendsfavoriterestaurants.html">My Friends' Favorite Restaurants</a></li>
+                <li><a href="receivedrecommendations.html">Received Recommendations</a></li>
+                <li><a href="searchrestaurants.html">Search Restaurants</a></li>
+              </ul>
+            </li>
+             <li class="dropdown"><a href="vieweditprofile.html">My Profile</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Help <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="contactus.html">Contact us</a></li>
+                <li><a href="howitworks.html">How it works/FAQ</a></li>
+              </ul>
+            </li>
+            <li><a href="#contact">Logout</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+  </div>
+    <div id = "cards-search-bar-order-filter">
+      <div id="friends-searchbar">
+        <input id="searchbar" type="text" name="search" placeholder="Search for new friends..">
+        <div id="friendsh1-filter">
+          <p class="friendsheader">Your friend search results: </p>
+        </div> <!--end friendsh1-filter-->
+      </div> <!-- end friends-searchbar-->
+      <div id="cards">
+        <div class="row">
+            <div class="col-md-4 col-xs-12">
+                <div class="card-container manual-flip">
+                 <!--<div class="card-container">-->
+                    <div class="card">
+                        <div class="front">
+                            <div class="cover">
+                                <img src="https://www.clipartsgram.com/image/124089475-california-beaches-tumblr-wallpaper-3.jpg" alt="background image"/>
+                            </div> <!-- end cover-->
+                            <div class="user">
+                                <img class="img-circle" src="images/Mo.jpg" alt="user picture"/>
+                            </div>
+                            <div class="content">
+                            <div class="main">
+                                <h3 class="name">Mo Li</h3>
+                                <p class="location">Mountain View, CA</p>
+                                <!-- <p class="text-center">Friends since:</p> -->
+                                <p class="friendship-details">Epicurious member since:</p>
+                                <p class="friendship-details last-detail">October 2014</p>
+                                <a class="friendship-details" href="#" onclick="rotateCard(this)">Friends in common</a><br>
+                            </div>
+                            <div>
+                                <button class="friendrequest">SEND FRIEND REQUEST</button>
+                            </div>
+                        </div>
+                        </div> <!-- end front -->
+                        <div class="back">
+                        <div class="header">
+                            <h5 class="motto">Huey and you share the following friends:</h5>
+                        </div>
+                        <div class="contentbackfriendrequest">
+                            <div class="main">
+                                <div class="aboutme-friendrequest">
+                                    <p class="text-center"><a href='#'>Anna Banana</a></p>
+                                    <p class="text-center"><a href='#'>John Sam</a></p>
+                                    <p class="text-center"><a href='#'>Chloe Dubois</a></p>
+                                    <p class="text-center"><a href='#'>Ron Drabkin</a></p>
+                                    <p class="text-center"><a href='#'>Diana Koffman</a></p>
+                                    <p class="text-center"><a href='#'>Brenda Asante</a></p>
+                                    <p class="text-center"><a href='#'>Michelle Grabau</a></p>
+                                    <p class="text-center"><a href='#'>Esteban Arcaute</a></p>
+                                    <p class="text-center"><a href='#'>Carly Gomez</a></p>
+                                    <p class="text-center"><a href='#'>Dan Lewis</a></p>
+                                    <p class="text-center"><a href='#'>Lucy Goodman</a></p>
+                                    <p class="text-center"><a href='#'>Luna Mirante</a></p>
+                                </div>
+                            </div><!-- end main-->
+                        </div><!--end contentbackfriendrequest-->
+                        <div class="footer">
+                            <button class="btn btn-simple" rel="tooltip" title="Flip Card" onclick="rotateCard(this)">
+                                <i class="fa fa-reply footerback"></i>Back
+                            </button>
+<!--                             <div class="social-links text-center">
+                                <a href="#" class="facebook"><i class="fa fa-facebook fa-fw"></i></a>
+                                <a href="#" class="google"><i class="fa fa-google-plus fa-fw"></i></a>
+                                <a href="#" class="twitter"><i class="fa fa-twitter fa-fw"></i></a>
+                            </div> -->
+                        </div>
+                    </div> <!-- end back-->
+                    </div> <!-- end card -->
+                </div> <!-- end card-container -->
+            </div> <!-- col-md-4 -->
+        <div class="col-md-4 col-xs-12">
+          <div class="card-container manual-flip">
+             <!--<div class="card-container">-->
+                <div class="card">
+                    <div class="front">
+                        <div class="cover">
+                            <img src="https://www.clipartsgram.com/image/129556292-kyz84k3.jpg" alt="background image"/>
+                        </div>
+                        <div class="user">
+                            <img class="img-circle" src="images/huey.jpg" alt="user image"/>
+                        </div>
+                        <div class="content">
+                            <div class="main">
+                                <h3 class="name">Huey Yao</h3>
+                                <p class="location">San Jose, CA</p>
+                                <!-- <p class="text-center">Friends since:</p> -->
+                                <p class="friendship-details">Epicurious member since:</p>
+                                <p class="friendship-details last-detail">March 2014</p>
+                                <a class="friendship-details" href="#" onclick="rotateCard(this)">Friends in common</a><br>
+                            </div>
+                            <div>
+                                <button class="friendrequest">SEND FRIEND REQUEST</button>
+                            </div>
+                        </div>
+                    </div> <!-- end front panel -->
+                    <div class="back">
+                        <div class="header">
+                            <h5 class="motto">Huey and you share the following friends:</h5>
+                        </div>
+                        <div class="contentbackfriendrequest">
+                            <div class="main">
+                                <div class="aboutme-friendrequest">
+                                    <p class="text-center"><a href='#'>Anna Banana</a></p>
+                                    <p class="text-center"><a href='#'>John Sam</a></p>
+                                    <p class="text-center"><a href='#'>Chloe Dubois</a></p>
+                                    <p class="text-center"><a href='#'>Ron Drabkin</a></p>
+                                    <p class="text-center"><a href='#'>Diana Koffman</a></p>
+                                    <p class="text-center"><a href='#'>Brenda Asante</a></p>
+                                    <p class="text-center"><a href='#'>Michelle Grabau</a></p>
+                                    <p class="text-center"><a href='#'>Esteban Arcaute</a></p>
+                                    <p class="text-center"><a href='#'>Carly Gomez</a></p>
+                                    <p class="text-center"><a href='#'>Dan Lewis</a></p>
+                                    <p class="text-center"><a href='#'>Lucy Goodman</a></p>
+                                    <p class="text-center"><a href='#'>Luna Mirante</a></p>
+                                </div>
+                            </div><!-- end main-->
+                        </div><!--end contentbackfriendrequest-->
+                        <div class="footer">
+                            <button class="btn btn-simple" rel="tooltip" title="Flip Card" onclick="rotateCard(this)">
+                                <i class="fa fa-reply footerback"></i>Back
+                            </button>
+<!--                             <div class="social-links text-center">
+                                <a href="#" class="facebook"><i class="fa fa-facebook fa-fw"></i></a>
+                                <a href="#" class="google"><i class="fa fa-google-plus fa-fw"></i></a>
+                                <a href="#" class="twitter"><i class="fa fa-twitter fa-fw"></i></a>
+                            </div> -->
+                        </div>
+                    </div> <!-- end back-->
+                </div> <!-- end card -->
+            </div> <!-- end card-container -->
+        </div> <!-- end col sm 3 -->
+        <div class="col-md-4 col-xs-12">
+          <div class="card-container manual-flip">
+             <!--<div class="card-container">-->
+                <div class="card">
+                    <div class="front">
+                        <div class="cover">
+                            <img src="http://www.hdimageson.com/wp-content/uploads/2017/03/1489485975_459_sunset-images.jpg" alt="background image"/>
+                        </div>
+                        <div class="user">
+                            <img class="img-circle" alt="background image" src="images/sastry.jpg"/>
+                        </div>
+                        <div class="content">
+                            <div class="main">
+                                <h3 class="name">Sastry Nanduri</h3>
+                                <p class="location">Sunnyvale, CA</p>
+                                <!-- <p class="text-center">Friends since:</p> -->
+                                <p class="friendship-details">Epicurious member since:</p>
+                                <p class="friendship-details last-detail">March 2014</p>
+                                <a class="friendship-details" href="#" onclick="rotateCard(this)">Friends in common</a><br>
+                            </div>
+                            <div>
+                                <button class="friendrequest">SEND FRIEND REQUEST</button>
+                            </div>
+                        </div>
+                    </div> <!-- end front panel -->
+                    <div class="back">
+                        <div class="header">
+                            <h5 class="motto">Sastry and you share the following friends:</h5>
+                        </div>
+                        <div class="contentbackfriendrequest">
+                            <div class="main">
+                                <div class="aboutme-friendrequest">
+                                    <p class="text-center"><a href='#'>Anna Banana</a></p>
+                                    <p class="text-center"><a href='#'>John Sam</a></p>
+                                    <p class="text-center"><a href='#'>Chloe Dubois</a></p>
+                                    <p class="text-center"><a href='#'>Ron Drabkin</a></p>
+                                    <p class="text-center"><a href='#'>Diana Koffman</a></p>
+                                    <p class="text-center"><a href='#'>Brenda Asante</a></p>
+                                    <p class="text-center"><a href='#'>Michelle Grabau</a></p>
+                                    <p class="text-center"><a href='#'>Esteban Arcaute</a></p>
+                                    <p class="text-center"><a href='#'>Carly Gomez</a></p>
+                                    <p class="text-center"><a href='#'>Dan Lewis</a></p>
+                                    <p class="text-center"><a href='#'>Lucy Goodman</a></p>
+                                    <p class="text-center"><a href='#'>Luna Mirante</a></p>
+                                </div>
+                            </div><!-- end main-->
+                        </div><!--end contentbackfriendrequest-->
+                        <div class="footer">
+                            <button class="btn btn-simple" rel="tooltip" title="Flip Card" onclick="rotateCard(this)">
+                                <i class="fa fa-reply"></i>Back
+                            </button>
+                        </div>
+                    </div> <!-- end back-->
+                </div> <!-- end card -->
+            </div> <!-- end card-container -->
+        </div> <!-- end col sm 3 -->
+        </div> <!-- end col-sm-10 -->
+    </div> <!-- end row -->
+    </div>  <!-- end cards-->
+   <div id="friends-searchbar">
+        <div id="friendsh1-filter">
+          <p class="friendsheader">Your friend requests: </p>
+        </div> <!--end friendsh1-filter-->
+      </div> <!-- end friends-searchbar-->
+   <div id="cards">
+        <div class="row">
+            <div class="col-md-4 col-xs-12">
+                <div class="card-container manual-flip">
+                 <!--<div class="card-container">-->
+                    <div class="card">
+                        <div class="front">
+                            <div class="cover">
+                                <img src="https://www.clipartsgram.com/image/124089475-california-beaches-tumblr-wallpaper-3.jpg" alt="background image"/>
+                            </div> <!-- end cover-->
+                            <div class="user">
+                                <img class="img-circle" src="images/Mo.jpg" alt="user picture"/>
+                            </div>
+                            <div class="content">
+                                <div class="main">
+                                    <h3 class="name">Mo Li</h3>
+                                    <p class="location">Mountain View, CA</p>
+                                    <!-- <p class="text-center">Friends since:</p> -->
+                                    <a class="friendship-details" href="#">Favorite Restaurants</a><br>
+                                    <div class="friendrequestbutton">
+                                        <button class="friendrequest">ACCEPT FRIEND REQUEST</button>
+                                    </div>
+                                </div><!-- end main-->
+                                <div class="footer">
+                                    <button class="btn btn-simple" onclick="rotateCard(this)">
+                                        <i class="fa fa-mail-forward"></i> Click to see more...
+                                    </button>
+                                </div><!--end main-->
+                            </div><!-- end content-->
+                        </div> <!-- end front -->
+                        <div class="back">
+                            <div class="header">
+                                <h5 class="motto">"I eat cake because it is someone's birthday somewhere."</h5>
+                            </div>
+                            <div class="content">
+                                <div class="main">
+                                    <div class="aboutme">
+                                        <h4 class="text-center">About me:</h4>
+                                        <p class="text-center">Love discovering new restaurants and sharing with friends!</p>
+                                    </div>
+                                    <div class="stats-container">
+                                        <div class="stats">
+                                            <h4>150</h4>
+                                            <p>Friends</p>
+                                        </div>
+                                        <div class="stats">
+                                            <h4>35</h4>
+                                            <p>Restaurants shortlisted</p>
+                                        </div>
+                                        <div class="stats">
+                                            <h4>Pizza</h4>
+                                            <p>Favorite food</p>
+                                        </div>
+                                    </div><!-- end stats-container-->
+                                </div><!-- end main-->
+                            </div><!--end content-->
+                            <div class="footer">
+                                <button class="btn btn-simple" rel="tooltip" title="Flip Card" onclick="rotateCard(this)">
+                                    <i class="fa fa-reply"></i>Back
+                                </button>
+                                <div class="social-links text-center">
+                                    <a href="#" class="facebook"><i class="fa fa-facebook fa-fw"></i></a>
+                                    <a href="#" class="google"><i class="fa fa-google-plus fa-fw"></i></a>
+                                    <a href="#" class="twitter"><i class="fa fa-twitter fa-fw"></i></a>
+                                </div>
+                            </div>
+                        </div> <!-- end back-->
+                    </div> <!-- end card -->
+                </div> <!-- end card-container -->
+            </div> <!-- col-md-4 -->
+        <div class="col-md-4 col-xs-12">
+          <div class="card-container manual-flip">
+             <!--<div class="card-container">-->
+                <div class="card">
+                    <div class="front">
+                        <div class="cover">
+                            <img src="https://www.clipartsgram.com/image/129556292-kyz84k3.jpg" alt="background image"/>
+                        </div>
+                        <div class="user">
+                            <img class="img-circle" src="images/huey.jpg" alt="user image"/>
+                        </div>
+                        <div class="content">
+                            <div class="main">
+                                <h3 class="name">Huey Yao</h3>
+                                <p class="location">San Jose, CA</p>
+                                <a class="friendship-details" href="#">Favorite Restaurants</a><br>
+                                <div class="friendrequestbutton">
+                                        <button class="friendrequest">ACCEPT FRIEND REQUEST</button>
+                                </div>
+                            </div>
+                            <div class="footer">
+                                <button class="btn btn-simple" onclick="rotateCard(this)">
+                                    <i class="fa fa-mail-forward"></i> Click to see more...
+                                </button>
+                            </div>
+                        </div>
+                    </div> <!-- end front panel -->
+                    <div class="back">
+                        <div class="header">
+                            <h5 class="motto">"Good food is good mood."</h5>
+                        </div>
+                        <div class="content">
+                            <div class="main">
+                                <div class="aboutme">
+                                    <h4 class="text-center">About me:</h4>
+                                    <p class="text-center">Eating out with family makes me happy.</p>
+                                </div>
+                                <div class="stats-container">
+                                    <div class="stats">
+                                        <h4>135</h4>
+                                        <p>Friends</p>
+                                    </div>
+                                    <div class="stats">
+                                        <h4>48</h4>
+                                        <p>Restaurants shortlisted</p>
+                                    </div>
+                                    <div class="stats">
+                                        <h4>Ramen</h4>
+                                        <p>Favorite food</p>
+                                    </div>
+                                </div><!-- end stats-container-->
+                            </div><!--end main-->
+                        </div><!--end content-->
+                        <div class="footer">
+                            <button class="btn btn-simple" rel="tooltip" title="Flip Card" onclick="rotateCard(this)">
+                                <i class="fa fa-reply"></i>Back
+                            </button>
+                            <div class="social-links text-center">
+                                <a href="#" class="facebook"><i class="fa fa-facebook fa-fw"></i></a>
+                                <a href="#" class="google"><i class="fa fa-google-plus fa-fw"></i></a>
+                                <a href="#" class="twitter"><i class="fa fa-twitter fa-fw"></i></a>
+                            </div> <!-- end social-links-->
+                        </div> <!-- end footter-->
+                    </div> <!-- end back panel -->
+                </div> <!-- end card -->
+            </div> <!-- end card-container -->
+        </div> <!-- end col sm 3 -->
+        <div class="col-md-4 col-xs-12">
+          <div class="card-container manual-flip">
+             <!--<div class="card-container">-->
+                <div class="card">
+                    <div class="front">
+                        <div class="cover">
+                            <img src="http://www.hdimageson.com/wp-content/uploads/2017/03/1489485975_459_sunset-images.jpg" alt="background image"/>
+                        </div>
+                        <div class="user">
+                            <img class="img-circle" alt="background image" src="images/sastry.jpg"/>
+                        </div>
+                        <div class="content">
+                            <div class="main">
+                                <h3 class="name">Sastry Nanduri</h3>
+                                <p class="location">Sunnyvale, CA</p>
+                                <a class="friendship-details" href="#">Favorite Restaurants</a><br>
+                                <div class="friendrequestbutton">
+                                    <button class="friendrequest">ACCEPT FRIEND REQUEST</button>
+                                </div>
+                            </div>
+                            <div class="footer">
+                                <button class="btn btn-simple" onclick="rotateCard(this)">
+                                    <i class="fa fa-mail-forward"></i> Click to see more...
+                                </button>
+                            </div>
+                        </div>
+                    </div> <!-- end front panel -->
+                    <div class="back">
+                        <div class="header">
+                            <h5 class="motto">"Life is short, eat dessert first."</h5>
+                        </div>
+                        <div class="content">
+                            <div class="main">
+                                <div class="aboutme">
+                                    <h4 class="text-center">About me:</h4>
+                                    <p class="text-center"> My daughters have the best restaurant recommendations!</p>
+                                </div>
+                                <div class="stats-container">
+                                    <div class="stats">
+                                        <h4>125</h4>
+                                        <p>Friends</p>
+                                    </div>
+                                    <div class="stats">
+                                        <h4>85</h4>
+                                        <p>Restaurants shortlisted</p>
+                                    </div>
+                                    <div class="stats">
+                                        <h4>Vegetarian</h4>
+                                        <p>Favorite Food</p>
+                                    </div>
+                                </div><!-- end stats-container-->
+                            </div><!-- end main -->
+                        </div><!-- end content-->
+                        <div class="footer">
+                            <button class="btn btn-simple" rel="tooltip" title="Flip Card" onclick="rotateCard(this)">
+                                <i class="fa fa-reply"></i>Back
+                            </button>
+                            <div class="social-links text-center">
+                                <a href="#" class="facebook"><i class="fa fa-facebook fa-fw"></i></a>
+                                <a href="#" class="google"><i class="fa fa-google-plus fa-fw"></i></a>
+                                <a href="#" class="twitter"><i class="fa fa-twitter fa-fw"></i></a>
+                            </div>
+                        </div><!-- end footer-->
+                    </div> <!-- end back -->
+                </div> <!-- end card -->
+            </div> <!-- end card-container -->
+        </div> <!-- end col sm 3 -->
+        </div> <!-- end col-sm-10 -->
+    </div> <!-- end row -->
+      </div>  <!-- end cards-->
+
+  <footer class="footer navbar-fixed-bottom">
+    <p class="text-muted credit">&#169; Epicurious Living 2017</p>
+  </footer>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

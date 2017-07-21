@@ -7,26 +7,15 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
-
     <title>Epicurious Living: My Dashboard</title>
     <link href="css/stylesflex.css" rel="stylesheet">
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-
-    <!-- Custom styles for navbar and footer -->
-    <link href="css/navbar-fixed-top.css" rel="stylesheet">
-    <link href="sticky-footer.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
-
   </head>
-
   <body>
   <div id="nav-wrapper">
-    <!-- Fixed navbar -->
+       <!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-top" style="background-color: white">
       <div class="container">
         <div class="navbar-header">
@@ -40,46 +29,33 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Feed</a></li>
+            <li class="dropdown"><a href="dashboard.html">Feed</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Friends <span class="caret"></span></a>
+              <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Friends <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#">View Friends</a></li>
-                <li><a href="#">Add Friends</a></li>
-                <li><a href="#">Accept Friend Requests</a></li>
+                <li class ="dropdown active"><a href="viewfriends.html">View Friends</a></li>
+                <li><a href="acceptaddfriends.html">Accept Friend Requests/Add Friends</a></li>
               </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Restaurants <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#">My Favorite Restaurants</a></li>
-                <li><a href="#">My Friends' Favorite Restaurants</a></li>
-                <li><a href="#">Received Recommendations</a></li>
-                <li><a href="#">Search Restaurants</a></li>
+                <li><a href="myfavoriterestaurants.html">My Favorite Restaurants</a></li>
+                <li><a href="friendsfavoriterestaurants.html">My Friends' Favorite Restaurants</a></li>
+                <li><a href="receivedrecommendations.html">Received Recommendations</a></li>
+                <li><a href="searchrestaurants.html">Search Restaurants</a></li>
               </ul>
             </li>
-             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Profile <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">View Profile</a></li>
-                <li><a href="#">Edit Profile</a></li>
-              </ul>
-            </li>
+             <li class="dropdown"><a href="vieweditprofile.html">My Profile</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Help <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#">Contact us</a></li>
-                <li><a href="#">How it works</a></li>
-                <li><a href="#">FAQ</a></li>
+                <li><a href="contactus.html">Contact us</a></li>
+                <li><a href="howitworks.html">How it works/FAQ</a></li>
               </ul>
             </li>
             <li><a href="#contact">Logout</a></li>
           </ul>
-         <!--  <ul class="nav navbar-nav navbar-right">
-            <li><a href="../navbar/">Default</a></li>
-            <li><a href="../navbar-static-top/">Static top</a></li>
-            <li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li>
-          </ul> -->
         </div><!--/.nav-collapse -->
       </div>
     </nav>
@@ -116,7 +92,5 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>
