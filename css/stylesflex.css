@@ -18,7 +18,6 @@ body {
 }
 
 #value-prop ul {
-	/*max-width: 550px;*/
 	margin: 0 auto;
 	text-align: center;
 	list-style: none;
@@ -37,6 +36,13 @@ body {
 	height: 20%;
 }
 
+#close {
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	top: 2px;
+	right: 2px;
+}
 .myButton {
 	width: 100%;
 	background-color: white;
@@ -56,6 +62,23 @@ body {
 	margin-bottom: auto;
 	margin-right: 3%;
 	font-size: 20px;
+}
+
+.friendrequest {
+	width: 100%;
+	background-color: white;
+	border: solid 2px rgb(1,16,27);
+	border-radius: 5px;
+	cursor: pointer;
+	color: #BF0018;
+	padding: 5px;
+	font-size: 16px;
+	margin-top: 15px;
+}
+
+.friendrequest:hover {
+	background-color: rgb(1,16,27) !important;
+	color: white !important;
 }
 
 .myButton:hover {
@@ -81,6 +104,10 @@ h3 {
 hr {
 	width: 100%;
 	border: 0.25px solid #BF0018;
+}
+
+.navbar-default .navbar-nav>li>a  {
+	color: #BF0018 !important;
 }
 
 #testimonials {
@@ -239,7 +266,9 @@ p {
 	top: 25%;
 	left: 25%;
 }
-
+form {
+	position: relative;
+}
 #registration{
 	border: 1px solid rgb(1,16,27);
 	border-radius: 5px;
@@ -372,6 +401,10 @@ form {
 	background-color: rgb(1,16,27) !important;
 	color: white !important;
 }
+
+.active{
+	font-color: rgb(1,16,27) !important;
+}
 .navbar-toggle {
 	background-color: rgb(1,16,27) !important;
 }
@@ -411,6 +444,7 @@ a.dropdown-toggle {
 #nav-wrapper {
 	display: block;
 	position: fixed;
+	z-index: 3;
 }
 .jumbotron {
 	padding: 0px !important;
@@ -487,8 +521,92 @@ a.dropdown-toggle {
 	color: white !important;
 }
 
-/*Cards css */
+/*View friends page css*/
+#cards-search-bar-order-filter {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin-top: 60px;
+}
 
+#searchbar {
+    border: 2px solid #ccc;
+    background-size: 30px 30px;
+    border-radius: 4px;
+    font-size: 16px;
+    background-image: url('searchicon.png');
+    background-position: 0px 0px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    width: 100%;
+    height: 40px;
+}
+
+#body_friendsid{
+	width: 100%;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#friends-searchbar {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100px
+	margin-right: auto;
+}
+
+.friendsheader {
+	font-size: 20px;
+	text-align: left;
+	font-weight: bold;
+}
+
+@media screen and (min-width: 1200px){
+	#friends-searchbar {
+		margin-left:-12%;
+	}
+
+}
+
+@media screen and (min-width: 800px) and (max-width:1000px) {
+	#friends-searchbar {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.friendrequestbutton {
+	margin-top: 10px;
+}
+#friendsh1-filter {
+	display: flex;
+	flex-direction: row;
+	margin-top: 5px;
+}
+
+#sortfriends {
+	height: 25px;
+	margin-left: 10px;
+	margin-top: 20px;
+}
+
+/*Cards css */
+#cards {
+	margin-left: -1%;
+	margin-top: 20px;
+}
+
+.last-detail {
+	margin-bottom: 20px !important;
+}
+@media screen and (min-width: 1200px) {
+	#cards {
+		margin-left: -11%;
+		width: 98%;
+	}
+}
 .btn:hover,
 .btn:focus,
 .btn:active{
@@ -566,7 +684,24 @@ a.dropdown-toggle {
 }
 /*        Style       */
 
+.friendship-details {
+	margin: 1px auto;
+	line-height: 14px;
+	font-style: normal;
+}
 
+@media screen and (max-width: 992px) {
+	.card-container {
+		width: 90% !important;
+		margin-left: auto !important;
+		margin-right: auto !important;
+		margin-bottom: 15px;
+	}
+}
+
+.content {
+	text-align: center;
+}
 .card{
     background: none repeat scroll 0 0 #FFFFFF;
     border-radius: 4px;
@@ -612,9 +747,10 @@ box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
 }
 .card .back .content .main {
     height: 215px;
+    min-height: 215px;
 }
 .card .name {
-		font-family: 'Arima Madurai', cursive;
+	font-family: 'Arima Madurai', cursive;
     font-size: 22px;
     line-height: 28px;
     margin: 10px 0 0;
@@ -626,7 +762,7 @@ box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
     font-weight: 400;
     line-height: 20px;
 }
-.card .profession{
+.card .location{
     color: #999999;
     text-align: center;
     margin-bottom: 20px;
@@ -652,13 +788,14 @@ box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
     height: 90px;
 }
 .card .motto{
-		font-family: 'Arima Madurai', cursive;
-    border-bottom: 1px solid #EEEEEE;
+	font-family: 'Arima Madurai', cursive;
+    border-bottom: 1px solid #EEEEEE !important;
     color: #999999;
     font-size: 14px;
     font-weight: 400;
     padding-bottom: 10px;
     text-align: center;
+    min-height: 180px;
 }
 
 .card .stats-container{
@@ -786,9 +923,26 @@ box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
     color: #555;
 }
 
+.aboutme {
+	min-height: 100px;
+}
 
-/*       Fix bug for IE      */
+.contentbackfriendrequest {
+	margin-top: -30px;
+}
+.aboutme-friendrequest {
+	min-height: 200px;
+	max-height: 300px;
+	overflow: scroll;
+}
 
+.aboutme-friendrequest p {
+	line-height: 10px;
+}
+
+.card .back .footer {
+	border-top: none !important;
+}
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     .front, .back{
         -ms-backface-visibility: visible;
@@ -808,12 +962,7 @@ box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
         visibility: visible;
     }
 }
-/* write rules for each screen size - for maximum size */
-/* Fix scrolling issue*/
-/*Fix h1 positioning*/
-/*customize cards*/
-.cardscont{
-	margin-top: 60px;
-	min-width: 60%;
-}
-/*end cards styling*/
+/** end cards css**/
+
+/*end view friends page css*/
+
