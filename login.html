@@ -2,44 +2,33 @@
 <html lang="en">
 <head>
 	<meta charset = "utf-8">
-	<!-- Give the user the most up to date experience in IE -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<!-- For mobile, how to display the page initially when it loads -->
 	<meta name="viewport" content ="width=device-width, initial-scale=1">
-	<title> Epicurious Living: Take the Guesswork Out of your Next Delicious Meal </title>
+	<title>Epicurious Living: Take the Guesswork Out of your Next Delicious Meal</title>
 	<link rel ="stylesheet" href = "css/stylesflex.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
 </head>
-<body id="regloginbody">
+<body id="regloginbody" onreload="redirect('login.html');">
 	<div id = "header">
-		 <picture>
-  			<source id="logo" srcset="images/LogoRobotoVertical.jpg" media="(max-width: 575px)">
-  			<source id="logo" srcset="images/LogoRobotoVertical.jpg" media="(min-midth: 576px)">
-  			<img style="width: 30%" src="images/LogoRobotoVertical.jpg" alt="Epicure Living Logo">
-		</picture> 
+  		<img class ="logo" src="images/LogoRobotoVertical.jpg" alt="Epicure Living Logo" onclick="redirect('index.html');">
 		<div id= "buttons">
-			<button class="myButton right">REGISTER</button>
-			<button class="myButton right">LOGIN</button>
+			<input type="submit" class="myButton right" value ="REGISTER" onclick="redirect('registration.html');"/>
+			<input type="submit" class="myButton right" value="LOGIN" onclick="redirect('login.html');"/>
 		</div>
 	</div>
 	<div>
-		<picture>
-  			<!-- <source id="hero" srcset="images/menu_font_revised.jpg" media="(max-width: 575px)">
-  			<source id="hero" srcset="images/menu_font_revised.jpg" media="(min-midth: 576px)"> -->
-  			<img id="hero" src="images/menu_font_revised.jpg" alt="Menu">
-		</picture> 
-		<!--<img id="hero" src="images/TextInMenu.jpg" alt="Menu">-->
+  		<img id="hero" src="images/menu_font_revised.jpg" alt="Menu">
 	</div>
 	<div class="fader">
 	</div>
 		<div id="login">
 			<form action="">
-				<img id="close" src="images/cross_symbol.png" alt="close">
+				<img id="close" src="images/cross_symbol.png" alt="close" onclick='hideclose();'>
 				<label class ="form-labels">e-mail address:</label><input class ="form-fields" type="text" name="email"><br>
 				<label class ="form-labels">password:</label><input class ="form-fields" type="text" name="password"><br>
 				<p id="forgot-pw"><a href="#">Forgot password</a></p>
 				<input class="myButton" type="submit" value="LOGIN">
-				<p> New to Epicurious Living? <br><a href="#">Register instead</a></p>
+				<p> New to Epicurious Living? <br><a href="registration.html">Register instead</a></p>
 			</form>
 		</div>
 	<div id="value-prop">
@@ -75,5 +64,14 @@
 	<div id="share">
 		<img class="socialmedia" src="images/logo_facebook.png" alt="facebook"><img class="socialmedia" src="images/Instagram-Logo.png" alt="instagram"><img class="socialmedia"  src="images/Twitter_logo-4.png" alt="twitter"><img class="socialmedia"  src="images/Snapchat-logo-as.png" alt="snapchat"><img class="socialmedia"  src="images/pinterest-logo.png" alt="pinterest">
 	</div>
+	<script>
+	function redirect(url) {
+	location.href=url;
+	}
+	function hideclose(){
+		document.getElementById('login').remove();
+		document.getElementsByClassName('fader')[0].remove();
+	}
+	</script>
 </body>
 </html>

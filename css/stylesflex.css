@@ -1,5 +1,5 @@
 * {	 
-	font-family: 'Roboto'; sans-serif;
+	font-family: Roboto, Sans-Serif;
 	box-sizing: border-box;
 	color: rgb(1,16,27);
 	background-color: rgb(255,255,255);
@@ -31,9 +31,9 @@ body {
 	justify-content: space-between;
 }
 
-#logo{
-	width: 20%;
-	height: 20%;
+.logo{
+	width: 15%;
+	height: 15%;
 }
 
 #close {
@@ -91,7 +91,7 @@ body {
 #hero {
 	width: 100%;
 	max-width: 960px;
-	-webkit-height: 60%;
+	height: 60% !important;
 }
 #value-prop {
 	width: 100%;
@@ -136,12 +136,11 @@ p {
 	font-style: italic;
 	font-size: 14px;
 	padding-top: 6px;
-	background-color: none;
 }
 
 .socialmedia {
-	width: 60px;
-	height: 60px;
+	width: 50px;
+	height: 50px;
 	margin-top: auto;
 	margin-bottom: auto;
 	margin: 4px;
@@ -156,7 +155,7 @@ p {
 	}
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 576px) {
 	#logo{
 		width: 80px;
 		height: 80px;
@@ -188,7 +187,7 @@ p {
 		margin: 2px;
 		font-size: 14px;
 	}
-	#value-prop {
+	.value-prop {
 		height: 40%;
 		width: 100%;
 	}
@@ -220,8 +219,8 @@ p {
 		height: 53px;
 		margin-top: -50px;
 		padding-top: 5px;
-		webkit-margin-left: auto;
-		webkit-margin-right: auto;
+		margin-left: auto;
+		margin-right: auto;
 	}
 	#close-icon {
 		position: relative;
@@ -403,7 +402,7 @@ form {
 }
 
 .active{
-	font-color: rgb(1,16,27) !important;
+	color: rgb(1,16,27) !important;
 }
 .navbar-toggle {
 	background-color: rgb(1,16,27) !important;
@@ -418,24 +417,20 @@ a.dropdown-toggle {
 
 }
 #picture-welcome {
-	width: 100%;
-	height: 25%;
-	text-align: left;
-	margin-top: 50px;
-}
-#picture-welcome img {
-	width: 10%;
-	margin-top: auto;
-	margin-bottom: auto;
-	display: inline;
-	border: 2px solid #BF0018 !important;
+	display: flex;
+	flex-direction: row;
 }
 
-#picture-welcome h1 {
-	width: 20%;
-	display: inline;
-	vertical-align: center;
-	font-size: 18px;
+#picture-welcome img {
+	width: 10%;
+	height: 10%;
+	margin-top: 50px;
+	border: 2px solid #BF0018 !important;
+}
+#picture-welcome h1{
+	margin-top: 50px;
+	font-size: 16px;
+	margin-left: 5px;
 }
 #recent-activity {
 	font-size: 16px;
@@ -515,7 +510,10 @@ a.dropdown-toggle {
 	font-size: 16px !important;
 }
 
-
+.userpic {
+	width: 450px;
+	height: 450px;
+}
 .profilebutton:hover {
 	background-color: rgb(1,16,27) !important;
 	color: white !important;
@@ -553,7 +551,6 @@ a.dropdown-toggle {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	height: 100px
 	margin-right: auto;
 }
 
@@ -595,7 +592,7 @@ a.dropdown-toggle {
 /*Cards css */
 #cards {
 	margin-left: -1%;
-	margin-top: 20px;
+	/*margin-top: 20px;*/
 }
 
 .last-detail {
@@ -618,7 +615,6 @@ a.dropdown-toggle {
    -moz-perspective: 800px;
      -o-perspective: 800px;
         perspective: 800px;
-        margin-bottom: 30px;
 }
 /* flip the pane when hovered */
 .card-container:not(.manual-flip):hover .card,
@@ -943,7 +939,9 @@ box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
 .card .back .footer {
 	border-top: none !important;
 }
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+
+/*@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     .front, .back{
         -ms-backface-visibility: visible;
         backface-visibility: visible;
@@ -961,7 +959,7 @@ box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
         z-index: 5;
         visibility: visible;
     }
-}
+}*/
 /** end cards css**/
 
 /*end view friends page css*/
